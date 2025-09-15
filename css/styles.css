@@ -1,0 +1,219 @@
+/* BLOQUE 1: Estilos generales y reset. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f0f2f5; /* Gris claro */
+    color: #333; 
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* BLOQUE 2: Estilos de la barra de navegación. */
+.navbar {
+    background-color: #ffffff; 
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: top 0.3s;
+}
+
+/* BLOQUE 3: Estilos del logo. */
+.navbar-brand .logo-text {
+    font-family: 'Fira Code', monospace;
+    font-weight: 500;
+    color: #007bff; 
+}
+
+.navbar .navbar-brand svg {
+    transition: transform 0.3s ease-in-out;
+    fill: #007bff; 
+}
+
+.navbar-brand:hover svg {
+    transform: rotate(15deg);
+}
+
+/* BLOQUE 4: Estilos de los enlaces de navegación. */
+.nav-link {
+    font-family: 'Fira Code', monospace;
+    transition: color 0.3s;
+    color: #000000; 
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #007bff !important; 
+}
+
+/* BLOQUE 5: Estilos para el contenido principal. */
+.content {
+    text-align: center;
+}
+
+.content h1 {
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.content p {
+    max-width: 600px;
+    margin: 1rem auto;
+    line-height: 1.6;
+}
+
+main {
+    padding-top: 80px;
+    flex-grow: 1; /* Empuja el footer hacia abajo */
+}
+
+.section-title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #000000;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    background-color: #007bff; 
+}
+
+/* BLOQUE 6: Elementos reusables. */
+.cta-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: 2px solid #007bff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-family: 'Fira Code', monospace;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+}
+
+/* BLOQUE 7: Estilos específicos de la página de inicio. */
+#home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+#home h1 {
+    font-size: 2rem;
+    color: #007bff; 
+    font-family: 'Fira Code', monospace;
+}
+
+#home h2 {
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 700;
+    color: #000000; 
+}
+
+#home .slogan {
+    font-size: 1.2rem;
+    color: #555; 
+}
+
+/* BLOQUE 8: Scroller de proyectos */
+.scroller-section {
+    width: 100%;
+    padding-top: 8rem;
+}
+
+.scroller {
+    max-width: 90%;
+    margin: auto;
+    -webkit-mask: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
+    mask: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
+}
+
+.scroller__inner {
+    padding-left: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    animation: scroll 40s linear infinite;
+}
+
+.scroller[data-speed="fast"] .scroller__inner {
+  animation-duration: 20s;
+}
+
+.scroller[data-speed="slow"] .scroller__inner {
+  animation-duration: 60s;
+}
+
+.scroller__inner:hover {
+    animation-play-state: paused;
+}
+
+.tag-list {
+    margin: 0;
+}
+
+.tag-list li {
+    display: block;
+    flex-shrink: 0;
+}
+
+.tag-list img {
+    width: 240px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.tag-list img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 0.5rem));
+    }
+}
+
+/* BLOQUE 9: Footer */
+.footer {
+    background-color: #ffffff; /* Blanco */
+    padding: 2rem 0;
+    border-top: 1px solid #dee2e6; /* Borde gris claro */
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer a:hover {
+    color: #0056b3;
+}
+
+.footer .social-link i {
+    font-size: 1.5rem;
+}
