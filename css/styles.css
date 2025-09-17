@@ -1,96 +1,87 @@
-/* BLOQUE 1: Estilos generales y reset. */
+/* --- Estilos Generales --- */
+/* Asegura que el tamaño de los elementos incluya el borde y el padding. */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Estilos base para todo el cuerpo de la página. */
 body {
-    background-color: #f0f2f5; /* Gris claro */
-    color: #333; 
-    font-family: 'Poppins', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+    font-family: 'Poppins', sans-serif; /* Fuente principal para la legibilidad. */
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 100vh; /* Asegura que el cuerpo ocupe al menos toda la altura de la pantalla. */
+    overflow-x: hidden; /* Evita el scroll horizontal. */
 }
 
-/* BLOQUE 2: Estilos de la barra de navegación. */
+/* --- Barra de Navegación --- */
 .navbar {
-    background-color: #ffffff; 
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: top 0.3s;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Sombra sutil para dar profundidad. */
+    transition: top 0.3s; /* Animación suave si se oculta/muestra. */
 }
 
-/* BLOQUE 3: Estilos del logo. */
+/* --- Logo --- */
 .navbar-brand .logo-text {
-    font-family: 'Fira Code', monospace;
+    font-family: 'Fira Code', monospace; /* Fuente de estilo código para el logo. */
     font-weight: 500;
-    color: #007bff; 
+    color: #007bff;
 }
 
 .navbar .navbar-brand svg {
-    transition: transform 0.3s ease-in-out;
-    fill: #007bff; 
+    transition: transform 0.3s ease-in-out; /* Animación al pasar el mouse. */
+    fill: #007bff;
 }
 
 .navbar-brand:hover svg {
-    transform: rotate(15deg);
+    transform: rotate(15deg); /* Gira el ícono ligeramente. */
 }
 
-/* BLOQUE 4: Estilos de los enlaces de navegación. */
+/* --- Enlaces de Navegación --- */
 .nav-link {
     font-family: 'Fira Code', monospace;
     transition: color 0.3s;
-    color: #000000; 
+    color: #000000;
 }
 
+/* Resalta el enlace de la página activa o al pasar el mouse. */
 .nav-link:hover,
 .nav-link.active {
-    color: #007bff !important; 
+    color: #007bff !important; /* El `!important` asegura que el estilo se aplique sobre los de Bootstrap. */
 }
 
-/* BLOQUE 5: Estilos para el contenido principal. */
-.content {
-    text-align: center;
+/* --- Contenido Principal --- */
+.area-contenido-principal {
+    padding-top: 80px; /* Espacio para que el contenido no quede oculto detrás de la barra de navegación. */
+    flex-grow: 1; /* Permite que el contenido principal crezca y empuje el footer hacia abajo. */
 }
 
-.content h1 {
-    font-weight: 700;
-    font-size: 3rem;
-}
-
-.content p {
-    max-width: 600px;
-    margin: 1rem auto;
-    line-height: 1.6;
-}
-
-main {
-    padding-top: 80px;
-    flex-grow: 1; /* Empuja el footer hacia abajo */
-}
-
-.section-title {
+/* Título para las secciones (ej. "Sobre Nosotros", "Portafolio"). */
+.titulo-de-seccion {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     color: #000000;
-    position: relative;
+    position: relative; /* Necesario para la línea decorativa de abajo. */
     margin-bottom: 40px;
 }
 
-.section-title::after {
+/* Línea decorativa debajo de los títulos de sección. */
+.titulo-de-seccion::after {
     content: '';
     position: absolute;
     bottom: -10px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Centra la línea. */
     width: 50px;
     height: 3px;
-    background-color: #007bff; 
+    background-color: #007bff;
 }
 
-/* BLOQUE 6: Elementos reusables. */
-.cta-button {
+/* --- Botón de Llamada a la Acción (CTA) --- */
+.boton-llamada-accion {
     background-color: #007bff;
     color: #ffffff;
     border: 2px solid #007bff;
@@ -101,15 +92,15 @@ main {
     font-family: 'Fira Code', monospace;
 }
 
-.cta-button:hover {
+.boton-llamada-accion:hover {
     background-color: #0056b3;
     border-color: #0056b3;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2);
+    transform: translateY(-3px); /* Eleva el botón ligeramente. */
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2); /* Sombra para el efecto de elevación. */
 }
 
-/* BLOQUE 7: Estilos específicos de la página de inicio. */
-#home {
+/* --- Estilos Específicos de la Página de Inicio --- */
+#seccion-principal {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -117,103 +108,108 @@ main {
     width: 100%;
 }
 
-#home h1 {
+#seccion-principal h1 {
     font-size: 2rem;
-    color: #007bff; 
+    color: #007bff;
     font-family: 'Fira Code', monospace;
 }
 
-#home h2 {
+#seccion-principal h2 {
+    /* Tamaño de fuente que se adapta al ancho de la pantalla. */
     font-size: clamp(40px, 8vw, 80px);
     font-weight: 700;
-    color: #000000; 
+    color: #000000;
 }
 
-#home .slogan {
+#seccion-principal .slogan {
     font-size: 1.2rem;
-    color: #555; 
+    color: #555;
 }
 
-/* BLOQUE 8: Scroller de proyectos */
-.scroller-section {
+/* --- Carrusel de Proyectos (Scroller) --- */
+.contenedor-carrusel-proyectos {
     width: 100%;
     padding-top: 8rem;
 }
 
-.scroller {
+/* Máscara para que los elementos del carrusel aparezcan y desaparezcan suavemente en los bordes. */
+.carrusel-infinito {
     max-width: 90%;
     margin: auto;
     -webkit-mask: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
     mask: linear-gradient(90deg, transparent, black 20%, black 80%, transparent);
 }
 
-.scroller__inner {
+.elementos-carrusel {
     padding-left: 0;
     display: flex;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap; /* Evita que los elementos salten a la siguiente línea. */
     gap: 1rem;
-    animation: scroll 40s linear infinite;
+    animation: scroll 40s linear infinite; /* La animación que mueve el carrusel. */
 }
 
-.scroller[data-speed="fast"] .scroller__inner {
+/* Permite controlar la velocidad de la animación desde el HTML. */
+.carrusel-infinito[data-speed="fast"] .elementos-carrusel {
   animation-duration: 20s;
 }
 
-.scroller[data-speed="slow"] .scroller__inner {
+.carrusel-infinito[data-speed="slow"] .elementos-carrusel {
   animation-duration: 60s;
 }
 
-.scroller__inner:hover {
+/* Pausa la animación cuando el usuario pasa el mouse sobre el carrusel. */
+.elementos-carrusel:hover {
     animation-play-state: paused;
 }
 
-.tag-list {
+.lista-de-proyectos {
     margin: 0;
 }
 
-.tag-list li {
+.lista-de-proyectos li {
     display: block;
-    flex-shrink: 0;
+    flex-shrink: 0; /* Evita que los elementos se encojan. */
 }
 
-.tag-list img {
+.lista-de-proyectos img {
     width: 240px;
     height: 150px;
-    object-fit: cover;
+    object-fit: cover; /* Asegura que la imagen cubra el espacio sin deformarse. */
     border-radius: 8px;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.tag-list img:hover {
-    transform: scale(1.05);
+.lista-de-proyectos img:hover {
+    transform: scale(1.05); /* Agranda la imagen ligeramente. */
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
+/* Define el movimiento del carrusel. */
 @keyframes scroll {
     to {
         transform: translate(calc(-50% - 0.5rem));
     }
 }
 
-/* BLOQUE 9: Footer */
-.footer {
-    background-color: #ffffff; /* Blanco */
+/* --- Pie de Página (Footer) --- */
+.pie-de-pagina {
+    background-color: #ffffff;
     padding: 2rem 0;
-    border-top: 1px solid #dee2e6; /* Borde gris claro */
+    border-top: 1px solid #dee2e6; /* Línea superior para separarlo del contenido. */
     font-size: 0.9rem;
     color: #555;
 }
 
-.footer a {
+.pie-de-pagina a {
     color: #007bff;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-.footer a:hover {
+.pie-de-pagina a:hover {
     color: #0056b3;
 }
 
-.footer .social-link i {
+.pie-de-pagina .enlace-social i {
     font-size: 1.5rem;
 }

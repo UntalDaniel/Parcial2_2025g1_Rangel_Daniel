@@ -3,143 +3,158 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Página de Bootstrap - Contacto</title>
-    <!-- Incluir fuentes de Google para Poppins y Fira Code -->
+    <title>CoderHub.run - Contacto</title>
+
+    <!-- Carga las fuentes de Google Fonts que se usarán en la página. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"/>
-    <!-- Incluir Bootstrap CSS -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Carga los estilos de Bootstrap para el diseño y componentes. -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <!-- Incluir Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <!-- Enlace a la hoja de estilos externa -->
-    <link rel="stylesheet" href="./css/styles.css">
+    <!-- Carga los íconos de Bootstrap. -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <!-- Nuestro css. -->
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <!-- Animacion de Animate.css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-expand-md">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="32"
-              height="32"
-              fill="white"
-              class="bi bi-braces-asterisk me-2"
-              viewBox="0 0 16 16"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M1.114 8.063V7.9c1.005-.102 1.497-.615 1.497-1.6V4.503c0-1.094.39-1.538 1.354-1.538h.273V2h-.376C2.25 2 1.49 2.759 1.49 4.352v1.524c0 1.094-.376 1.456-1.49 1.456v1.299c1.114 0 1.49.362 1.49 1.456v1.524c0 1.593.76 2.352 2.372 2.352h.376v-.964h-.273c-.964 0-1.354-.444-1.354-1.538V9.663c0-.984-.492-1.497-1.497-1.6ZM14.886 7.9v.163c-1.005.103-1.497.616-1.497 1.6v1.798c0 1.094-.39 1.538-1.354 1.538h-.273v.964h.376c1.613 0 2.372-.759 2.372-2.352v-1.524c0-1.094.376-1.456 1.49-1.456V7.9c-1.114 0-1.49-.362-1.49-1.456V4.92c0-1.593-.76-2.352-2.372-2.352h-.376v.964h.273c.964 0 1.354.444 1.354 1.538V6.3c0 .984.492 1.497 1.497 1.6ZM7.5 11.5V9.25l-.81.81-.63-.63L7.5 8l-1.44-1.44.63-.63.81.81V4.5h.9v2.25l.81-.81.63.63L8.5 8l1.44 1.44-.63.63-.81-.81V11.5h-.9Z"
-              />
-            </svg>
-            <span class="logo-text">Bootstrap</span>
-          </a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">/inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="nosotros.html">/nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="servicios.html">/servicios</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="portafolio.html">/portafolio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="contacto.html">/contacto</a>
-              </li>
-            </ul>
+    <!-- El encabezado se carga aquí dinámicamente con JavaScript. -->
+    <header></header>
+
+    <!-- Main principal de la página de contacto. -->
+    <main class="area-contenido-principal">
+      <section
+        id="seccion-contacto"
+        class="py-5 animate__animated animate__fadeInUp"
+      >
+        <div class="container">
+          <h2 class="titulo-de-seccion text-center mb-5">Contacto</h2>
+          <div class="row">
+            <!-- Columna del formulario de contacto. -->
+            <div class="col-lg-6 mb-4 mb-lg-0">
+              <h4 class="mb-4">Envíanos un mensaje</h4>
+              <form
+                id="formulario-contacto"
+                action="#"
+                method="post"
+                class="needs-validation"
+                novalidate
+              >
+                <!-- Campo para el nombre. -->
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombre"
+                    name="nombre"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Por favor, ingresa tu nombre.
+                  </div>
+                </div>
+                <!-- Campo para el correo electrónico. -->
+                <div class="mb-3">
+                  <label for="correo" class="form-label"
+                    >Correo Electrónico</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="correo"
+                    name="correo"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Por favor, ingresa un correo electrónico válido.
+                  </div>
+                </div>
+                <!-- Campo para el asunto. -->
+                <div class="mb-3">
+                  <label for="asunto" class="form-label">Asunto</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="asunto"
+                    name="asunto"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Por favor, ingresa un asunto.
+                  </div>
+                </div>
+                <!-- Campo para el mensaje. -->
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea
+                    class="form-control"
+                    id="mensaje"
+                    name="mensaje"
+                    rows="5"
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback">
+                    Por favor, ingresa tu mensaje.
+                  </div>
+                </div>
+                <button type="submit" class="boton-llamada-accion">
+                  Enviar
+                </button>
+              </form>
+            </div>
+
+            <!-- Columna del mapa de ubicación. -->
+            <div class="col-lg-6">
+              <h4 class="mb-4">Nuestra Ubicación</h4>
+              <!-- Contenedor adaptable para el mapa. -->
+              <div class="ratio ratio-16x9">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3984.7900000000002!2d-75.60999999999999!3d1.6166666666666667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e244e0000000001%3A0x0!2sParque+Principal!5e0!3m2!1ses!2sco!4v1678886400000!5m2!1ses!2sco"
+                  width="600"
+                  height="450"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                >
+                </iframe>
+              </div>
+            </div>
           </div>
         </div>
-      </nav>
-    </header>
-
-    <main class="content">
-        <section id="contacto" class="py-5">
-            <div class="container">
-                <h2 class="section-title text-center mb-5">Contacto</h2>
-                <div class="row">
-                    <!-- Formulario -->
-                    <div class="col-lg-6 mb-4 mb-lg-0">
-                        <h4 class="mb-4">Envíanos un mensaje</h4>
-                        <form action="#" method="post">
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" name="nombre" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="correo" class="form-label">Correo Electrónico</label>
-                                <input type="email" class="form-control" id="correo" name="correo" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="asunto" class="form-label">Asunto</label>
-                                <input type="text" class="form-control" id="asunto" name="asunto" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="mensaje" class="form-label">Mensaje</label>
-                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" required></textarea>
-                            </div>
-                            <button type="submit" class="cta-button">Enviar</button>
-                        </form>
-                    </div>
-
-                    <!-- Mapa -->
-                    <div class="col-lg-6">
-                        <h4 class="mb-4">Nuestra Ubicación</h4>
-                        <div class="ratio ratio-16x9">
-                            <iframe 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387191.33750346623!2d-74.25986613524472!3d40.69714941932242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNueva%20York%2C%20EE.%20UU.!5e0!3m2!1ses!2sco!4v1678886345678!5m2!1ses!2sco"
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      </section>
     </main>
 
-    <footer class="footer mt-auto py-3">
-        <div class="container text-center">
-            <div class="mb-2">
-                <span>Teléfono: (123) 456-7890</span> |
-                <span>Correo: <a href="mailto:contacto@coderhub.run">contacto@coderhub.run</a></span>
-            </div>
-            <div>
-                <a href="#" class="social-link me-2"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="social-link me-2"><i class="bi bi-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="bi bi-github"></i></a>
-            </div>
-        </div>
-    </footer>
+    <!-- El pie de página se carga aquí dinámicamente con JavaScript. -->
+    <footer class="pie-de-pagina mt-auto py-3"></footer>
 
-    <!-- Incluir Bootstrap JS -->
+    <!-- Carga el script de Bootstrap para funcionalidades como el menú desplegable. -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
 
+    <!-- Carga el script personalizado para la validación del formulario y la carga del header/footer. -->
+    <script src="js/main.js"></script>
   </body>
 </html>
